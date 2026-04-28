@@ -1,0 +1,57 @@
+{
+  "info": {
+    "_postman_id": "8ac7c4a9-7c69-4f41-9c9b-3c7b1b1f8f18",
+    "name": "Bulk User Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Bulk Create Users",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/users/bulk-create",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "users", "bulk-create"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"fullName\": \"Jane Doe\",\n    \"email\": \"jane@example.com\",\n    \"phone\": \"9876543210\",\n    \"walletBalance\": 100,\n    \"isBlocked\": false,\n    \"kycStatus\": \"Pending\",\n    \"deviceInfo\": {\n      \"ipAddress\": \"192.168.1.10\",\n      \"deviceType\": \"Mobile\",\n      \"os\": \"Android\"\n    }\n  }\n]"
+        }
+      }
+    },
+    {
+      "name": "Bulk Update Users",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/users/bulk-update",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "users", "bulk-update"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"email\": \"jane@example.com\",\n    \"walletBalance\": 250,\n    \"isBlocked\": true\n  }\n]"
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

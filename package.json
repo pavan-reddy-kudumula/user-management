@@ -1,0 +1,26 @@
+{
+  "name": "bulk-user-management-system",
+  "version": "1.0.0",
+  "description": "Bulk User Management System with Node.js, Express, and MongoDB",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node scripts/seed-sample-users.js",
+    "export": "node scripts/export-database.js"
+  },
+  "dependencies": {
+    "bson": "^6.10.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongodb": "^6.13.1",
+    "mongoose": "^8.10.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules
+.env
+npm-debug.log*
+db_backup/*.bson
+db_backup/*.metadata.json
+users.json
